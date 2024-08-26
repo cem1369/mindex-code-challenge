@@ -27,6 +27,7 @@ public class EmployeeController {
         return employeeService.create(employee);
     }
 
+    // Modified this to leave out the Compensation data
     @GetMapping("/employee/{id}")
     public EmployeeInfo read(@PathVariable String id) {
         LOG.debug("Received employee create request for id [{}]", id);
