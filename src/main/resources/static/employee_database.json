@@ -19,7 +19,11 @@
     "firstName" : "Paul",
     "lastName" : "McCartney",
     "position" : "Developer I",
-    "department" : "Engineering"
+    "department" : "Engineering",
+    "compensation" : {
+        "salary" : 100,
+        "effectiveDate" : "2024-08-01"
+      }
   },
   {
     "employeeId" : "03aa1462-ffa9-4978-901b-7c001562cf6f",
