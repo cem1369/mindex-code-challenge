@@ -75,6 +75,8 @@ public class EmployeeServiceImplTest {
                         readEmployee.getEmployeeId()).getBody();
 
         assertEmployeeEquivalence(readEmployee, updatedEmployee);
+
+        // Re-read to check for a create (duplicate) vs. and actual update
         Employee readEmployeeAgain = restTemplate.getForEntity(employeeIdUrl, Employee.class, updatedEmployee.getEmployeeId()).getBody();
         assertEmployeeEquivalence(updatedEmployee, readEmployeeAgain);
     }

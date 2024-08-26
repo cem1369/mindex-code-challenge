@@ -2,7 +2,7 @@ package com.mindex.challenge.data;
 
 import java.util.List;
 
-// Initially had EmployeeInfo as a projection interface, but the fields got reordered.  Looks like a known issue (?)
+// Initially had EmployeeInfo as a projection interface, but the fields got reordered.
 public class EmployeeInfo {
     private String employeeId;
     private String firstName;

@@ -7,6 +7,8 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 @Repository
 public interface EmployeeRepository extends MongoRepository<Employee, String> {
+    // Projection that leaves off the Compensation data.
     EmployeeInfo findInfoByEmployeeId(String employeeId);
+    // Complete Employee
     Employee findByEmployeeId(String employeeId);
 }
