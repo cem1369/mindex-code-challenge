@@ -2,6 +2,7 @@ package com.mindex.challenge.service.impl;
 
 import com.mindex.challenge.dao.EmployeeRepository;
 import com.mindex.challenge.data.Employee;
+import com.mindex.challenge.data.EmployeeInfo;
 import com.mindex.challenge.service.EmployeeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,16 +29,16 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public Employee read(String id) {
+    public EmployeeInfo read(String id) {
         LOG.debug("Creating employee with id [{}]", id);
 
-        Employee employee = employeeRepository.findByEmployeeId(id);
+        EmployeeInfo employeeInfo = employeeRepository.findInfoByEmployeeId(id);
 
-        if (employee == null) {
+        if (employeeInfo == null) {
             throw new RuntimeException("Invalid employeeId: " + id);
         }
 
-        return employee;
+        return employeeInfo;
     }
 
     @Override
