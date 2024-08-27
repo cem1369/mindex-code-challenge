@@ -1,4 +1,7 @@
 # Developer Notes
+My solution was based on not introducing relational tables in the NoSQL database.  I was probably reading into this choice of Mongo too much (versus using H2), it was probably just for ease of use.
+
+A different, and perhaps easier approach, would be to just create a new document - Compensation.  Linked to the Employee with the employeeId as a field.
 ## Changes to existing files, independent from challenge tasks
 Employee update creates duplicate records.
 ### src/main/java/com/mindex/challenge/data/Employee.java
